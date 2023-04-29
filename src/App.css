@@ -1,0 +1,32 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--title {
+  color: #f0fdfa;
+  letter-spacing: 3px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.cv--form {
+  border: 2px solid red;
+}
