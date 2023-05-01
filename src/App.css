@@ -4,29 +4,65 @@
 
 body {
   margin: 0;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 
-header {
-  background-color: #1f2937;
+/* ---- Skeleton styling ----- */
+main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 3rem;
 }
 
-.page--title {
-  color: #f0fdfa;
-  letter-spacing: 3px;
+.background {
+  height: 100vh;
+  min-width: 900px;
+  background-image: url(../public/cv-bg.jpg);
+  background-size: cover;
 }
 
-main {
+.cv {
+  margin: 30px;
+  background-color: #ffffffc5;
+  height: 100%;
+}
+
+/* ----- ---- Form styling ---- ----- */
+
+/* .cv--form {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  width: 600px;
+  padding: 1.5rem;
+}
+
+.form--section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 3rem;
 }
 
-.cv--form {
-  border: 2px solid red;
+.section--title {
+  font-weight: 600;
 }
+
+.input--field,
+#description {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  resize: none;
+}
+
+.input--field {
+  height: 1.5rem;
+}
+
+.input--field:focus,
+#description:focus {
+  outline: 1px solid #c8c8c8;
+  border: 1px solid transparent;
+} */

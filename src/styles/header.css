@@ -1,0 +1,70 @@
+header {
+  background-color: #547588cb;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header--spacer {
+  width: 20rem;
+}
+
+.cv--title {
+  flex: 1;
+  color: #f0fdfa;
+  letter-spacing: 3px;
+}
+
+.headshotWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+
+.headshot {
+  height: 220px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contactInfo {
+  font-size: 13px;
+}
+
+.objective {
+  width: 63%;
+  margin-left: auto;
+  height: 5rem;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section--title {
+  margin: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section--content {
+  margin: 5px;
+  font-size: 13px;
+}
+
+.headerBreak {
+  border: 1px solid #acacacc9;
+  margin: 0px 20px;
+  margin-bottom: 2.5rem;
+}
