@@ -1,9 +1,8 @@
-import "../styles/header.css";
-
 export const Header = () => {
   let myUrl = "../../public/headshot.png";
   let phone = "(555) 555-5555";
   let email = "email@email.com";
+
   return (
     <section>
       <header>

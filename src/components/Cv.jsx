@@ -1,5 +1,6 @@
 import { Header } from "./Header";
 import { Skills } from "./Skills";
+import { Education } from "./Education";
 
 export const Cv = () => {
   return (
@@ -7,6 +8,7 @@ export const Cv = () => {
       <div className="cv">
         <Header />
         <Skills />
+        <Education />
       </div>
     </div>
   );
