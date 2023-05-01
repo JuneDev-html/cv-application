@@ -1,6 +1,7 @@
 @import "./styles/education.css";
 @import "./styles/header.css";
 @import "./styles/skills.css";
+@import "./styles/experience.css";
 
 * {
   font-family: "Montserrat", sans-serif;
@@ -9,9 +10,12 @@
 body {
   margin: 0;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---- Skeleton styling ----- */
+
 main {
   display: flex;
   justify-content: center;
@@ -20,16 +24,19 @@ main {
 }
 
 .background {
-  height: 100vh;
   min-width: 900px;
   background-image: url(../public/cv-bg.jpg);
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cv {
   margin: 30px;
   background-color: #ffffffc5;
-  height: 100%;
+
+  min-width: 90%;
 }
 
 /* ----- ---- Form styling ---- ----- */

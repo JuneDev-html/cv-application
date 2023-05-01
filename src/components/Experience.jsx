@@ -1,52 +1,48 @@
 export const Experience = ({ data, updateValues }) => {
   return (
-    <section className="form--section">
+    <section className="skills--section">
       <h4 className="section--title">Experience</h4>
-      <input
-        id="position"
-        type="text"
-        name="position"
-        className="input--field"
-        value={data.position}
-        placeholder="Position"
-        onChange={(e) => updateValues(e, "experience")}
-      />
-      <input
-        id="company"
-        type="text"
-        name="company"
-        className="input--field"
-        value={data.company}
-        placeholder="Company"
-        onChange={(e) => updateValues(e, "experience")}
-      />
-      <input
-        id="city"
-        type="text"
-        name="city"
-        className="input--field"
-        value={data.city}
-        placeholder="City"
-        onChange={(e) => updateValues(e, "experience")}
-      />
-      <input
-        id="from"
-        type="text"
-        name="from"
-        className="input--field"
-        value={data.from}
-        placeholder="From"
-        onChange={(e) => updateValues(e, "experience")}
-      />
-      <input
-        id="to"
-        type="text"
-        name="to"
-        className="input--field"
-        value={data.to}
-        placeholder="To"
-        onChange={(e) => updateValues(e, "experience")}
-      />
+      <section className="exp--item">
+        <div className="position">
+          <p className="position--title">Front End Developer</p>
+          <p className="position--date">SEP 2022 - CURRENT</p>
+        </div>
+        <p className="position--location">Freelance</p>
+        <ul className="exp--list">
+          <li className="exp--list--item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            fuga!
+          </li>
+          <li className="exp--list--item"> Lorem ipsum dolor sit amet.</li>
+          <li className="exp--list--item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing.
+          </li>
+          <li className="exp--list--item">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore!
+          </li>
+        </ul>
+      </section>
+      <section className="exp--item">
+        <div className="position">
+          <p className="position--title">Front End Developer Internship</p>
+          <p className="position--date">APRIL 2022 - SEP 2022</p>
+        </div>
+        <p className="position--location">Cool Tech Company</p>
+        <ul className="exp--list">
+          <li className="exp--list--item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            fuga!
+          </li>
+          <li className="exp--list--item"> Lorem ipsum dolor sit amet.</li>
+          <li className="exp--list--item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing.
+          </li>
+          <li className="exp--list--item">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore!
+          </li>
+        </ul>
+      </section>
+      <div className="spacer"></div>
     </section>
   );
 };
