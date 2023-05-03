@@ -9,6 +9,25 @@
   font-weight: 600;
 }
 
+.edit--wrap {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.education--wrap {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px 5px;
+}
+
+.education--wrap > input {
+  padding-left: 5px;
+}
+
 .input--wrap {
   display: flex;
   position: relative;
@@ -36,11 +55,12 @@
   border: 1px solid transparent;
 }
 
-.edit--add {
+.edit--add,
+.remove--education {
   background-color: white;
   color: #c8c8c8;
   border: 1px solid #c8c8c8;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .edit--add:hover {
@@ -62,6 +82,12 @@
   color: red;
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.remove--education:hover {
+  color: red;
+  border: 1px solid red;
+  cursor: pointer;
 }
 /* ---- Modal ---- */
 

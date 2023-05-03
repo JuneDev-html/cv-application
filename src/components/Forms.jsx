@@ -94,7 +94,7 @@ export const SkillsForm = ({
   return (
     <section className="form--section">
       <h4 className="form--title">Skills & Qualifications</h4>
-      {allSkills}
+      <div className="edit--wrap">{allSkills}</div>
       <button className="edit--add" onClick={addSkill}>
         +
       </button>
@@ -107,6 +107,72 @@ export const SkillsForm = ({
 
 // -------- Education ----------
 
-export const EducationForm = () => {
-  return <h1>education</h1>;
+export const EducationForm = ({
+  education,
+  finishEdit,
+  editEducation,
+  addEducation,
+  removeEducation,
+}) => {
+  const educationHistory = education.map((item) => {
+    return (
+      <fieldset key={item.id} className="education--wrap">
+        <input
+          type="text"
+          id={item.id}
+          name="degree"
+          placeholder="Degree"
+          className="input--field"
+          value={item.degree}
+          onChange={(e) => editEducation(e, item.id)}
+        />
+        <input
+          type="text"
+          id={item.id}
+          name="graduation"
+          placeholder="Graduation Date (Month, YYYY)"
+          className="input--field"
+          value={item.graduation}
+          onChange={(e) => editEducation(e, item.id)}
+        />
+        <input
+          type="text"
+          id={item.id}
+          name="school"
+          placeholder="School Name"
+          className="input--field"
+          value={item.school}
+          onChange={(e) => editEducation(e, item.id)}
+        />
+        <input
+          type="text"
+          id={item.id}
+          name="schoolLocation"
+          placeholder="School Location (City, State)"
+          className="input--field"
+          value={item.schoolLocation}
+          onChange={(e) => editEducation(e, item.id)}
+        />
+        <button
+          id={item.id}
+          className="remove--education"
+          onClick={removeEducation}
+        >
+          -
+        </button>
+      </fieldset>
+    );
+  });
+  return (
+    <section className="form--section">
+      <h4 className="form--title">Education</h4>
+      <div className="edit--wrap">{educationHistory}</div>
+      <button className="edit--add" onClick={addEducation}>
+        +
+      </button>
+      <button className="edit--save" onClick={finishEdit}>
+        Save
+      </button>
+    </section>
+  );
 };

@@ -7,40 +7,50 @@ export const Education = () => {
   const [education, setEducation] = React.useState(defaultEducation);
 
   const editEdu = (e, id) => {
-    const { value } = e.target;
+    const { name, value } = e.target;
 
-    // setEducation((prevEdu) => {
-    //   return prevEdu.map((body) => {
-    //     return body.id === id
-    //       ? {
-    //           ...body,
-    //           skill: value,
-    //         }
-    //       : body;
-    //   });
-    // });
+    setEducation((prevEdu) => {
+      return prevEdu.map((edu) => {
+        return edu.id === id
+          ? {
+              ...edu,
+              [name]: value,
+            }
+          : edu;
+      });
+    });
   };
 
-  // Add skill
-  // const addEdu = () => {
-  //   setSkills((prevSkills) => {
-  //     return [...prevSkills, { id: prevSkills.length + 1, skill: "" }];
-  //   });
-  // };
+  // Add Education Entry
+  const addEdu = () => {
+    setEducation((prevEdu) => {
+      return [
+        ...prevEdu,
+        {
+          id: prevEdu.length + 1,
+          degree: "",
+          graduation: "",
+          school: "",
+          schoolLocation: "",
+        },
+      ];
+    });
+  };
 
-  // Remove Skill
-  // const removeEdu = (e) => {
-  //   const { name } = e.target;
+  // Remove Education Entry
+  const removeEdu = (e) => {
+    const { id } = e.target;
+    console.log(id);
 
-  //   setSkills((prevSkills) => {
-  //     return prevSkills.filter((skill) => skill.id != [name]);
-  //   });
-  // };
+    setEducation((prevEdu) => {
+      return prevEdu.filter((edu) => edu.id != [id]);
+    });
+  };
 
   // helps to decide whether to show button / editing modal
   const [edit, setEdit] = React.useState({
     isHovering: false,
-    isEditing: true,
+    isEditing: false,
   });
 
   // changes hover state to show edit button
@@ -87,9 +97,9 @@ export const Education = () => {
             <EducationForm
               education={education}
               finishEdit={editSection}
-              // editEducation={editEdu}
-              // addEducation={addEdu}
-              // removeEducation={removeEdu}
+              editEducation={editEdu}
+              addEducation={addEdu}
+              removeEducation={removeEdu}
             />
           </div>
           <div id="overlay"></div>
