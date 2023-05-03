@@ -1,5 +1,6 @@
 import React from "react";
 import { HeadForm } from "./Forms";
+import { Edit } from "./Edit";
 
 export const Header = () => {
   const [data, setData] = React.useState({
@@ -74,21 +75,10 @@ export const Header = () => {
         </section>
       </header>
       <div className="objective">
-        <div className="btn-row">
-          <h4 className="section--title">Objective</h4>
-          {edit.isHovering && (
-            <button className="edit--btn" onClick={editSection}>
-              Edit
-            </button>
-          )}
-        </div>
+        <Edit title="Objectives" edit={edit} editSection={editSection} />
         <p className="section--content">{data.objective}</p>
       </div>
       <hr className="headerBreak" />
     </section>
   );
-};
-
-const editSection = () => {
-  console.log("section editor working");
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { SkillsForm } from "./Forms";
 import { defaultSkills } from "./Data";
+import { Edit } from "./Edit";
 
 export const Skills = () => {
   const [skills, setSkills] = React.useState(defaultSkills);
@@ -40,7 +41,7 @@ export const Skills = () => {
   // helps to decide whether to show button / editing modal
   const [edit, setEdit] = React.useState({
     isHovering: false,
-    isEditing: true,
+    isEditing: false,
   });
 
   // changes hover state to show edit button
@@ -89,14 +90,11 @@ export const Skills = () => {
           <div id="overlay"></div>
         </div>
       )}
-      <div className="btn-row">
-        <h4 className="section--title">Skills & Qualifications</h4>
-        {edit.isHovering && (
-          <button className="edit--btn" onClick={editSection}>
-            Edit
-          </button>
-        )}
-      </div>
+      <Edit
+        title="Skills & Qualifications"
+        edit={edit}
+        editSection={editSection}
+      />
       <ul className="skills--list">{allSkills}</ul>
     </section>
   );
