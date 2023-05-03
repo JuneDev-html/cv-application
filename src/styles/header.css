@@ -52,7 +52,7 @@ header {
   flex-direction: column;
 }
 
-.obj-row {
+.btn-row {
   display: flex;
 }
 
@@ -73,14 +73,15 @@ header {
   margin-bottom: 2rem;
 }
 
-.header--edit--btn {
+.edit--btn {
   width: 100px;
   margin-left: auto;
   margin-right: 2rem;
 }
 
-.header--edit--btn,
-.edit--save {
+.edit--btn,
+.edit--save,
+.edit--add {
   padding: 3px 20px;
   background-color: #000;
   color: #f1f1f1;
@@ -89,7 +90,7 @@ header {
   transition: 0.2s;
 }
 
-.header--edit--btn:hover,
+.edit--btn:hover,
 .edit--save:hover {
   background-color: transparent;
   border: 2px solid #000;
@@ -99,7 +100,8 @@ header {
 }
 
 .header--edit--btn:active,
-.edit--save:active {
+.edit--save:active,
+.edit--add:active {
   transform: scale(0.95);
   transition: 0.15s;
 }

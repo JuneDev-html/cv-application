@@ -74,10 +74,10 @@ export const Header = () => {
         </section>
       </header>
       <div className="objective">
-        <div className="obj-row">
+        <div className="btn-row">
           <h4 className="section--title">Objective</h4>
           {edit.isHovering && (
-            <button className="header--edit--btn" onClick={editSection}>
+            <button className="edit--btn" onClick={editSection}>
               Edit
             </button>
           )}

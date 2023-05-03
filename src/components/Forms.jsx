@@ -55,3 +55,44 @@ export const HeadForm = ({ data, updateValues, finishEdit }) => {
     </section>
   );
 };
+
+// ------- Skills & Qualifications ------
+export const SkillsForm = ({
+  skills,
+  editSkills,
+  addSkill,
+  removeSkill,
+  finishEdit,
+}) => {
+  const allSkills = skills.map((skill, id) => {
+    return (
+      // Wrap everything in a div
+      // add a remove button on the left
+      // maybe place it with absolute
+      <div className="input--wrap">
+        <input
+          type="text"
+          key={id}
+          name={id + 1}
+          placeholder="Enter skill"
+          className="input--field"
+          value={skill.skill}
+          onChange={(e) => editSkills(e, skill.id)}
+        />
+      </div>
+    );
+  });
+
+  return (
+    <section className="form--section">
+      <h4 className="form--title">Skills & Qualifications</h4>
+      {allSkills}
+      <button className="edit--add" onClick={addSkill}>
+        +
+      </button>
+      <button className="edit--save" onClick={finishEdit}>
+        Save
+      </button>
+    </section>
+  );
+};

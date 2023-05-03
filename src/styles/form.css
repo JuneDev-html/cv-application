@@ -9,6 +9,10 @@
   font-weight: 600;
 }
 
+.input--wrap {
+  display: flex;
+}
+
 .input--field,
 #objective {
   border: 1px solid #c8c8c8;
@@ -21,6 +25,8 @@
 
 .input--field {
   height: 1.5rem;
+  flex: 1;
+  padding-left: 30px;
 }
 
 .input--field:focus,
@@ -29,11 +35,18 @@
   border: 1px solid transparent;
 }
 
-.edit--save {
-  background-color: #000;
-  color: white;
+.edit--add {
+  background-color: white;
+  color: #c8c8c8;
+  border: 1px solid #c8c8c8;
+  margin: 10px 0px;
 }
 
+.edit--add:hover {
+  color: #000;
+  cursor: pointer;
+  border: 1px solid black;
+}
 /* ---- Modal ---- */
 
 .modal {
