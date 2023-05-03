@@ -70,6 +70,14 @@ export const SkillsForm = ({
       // add a remove button on the left
       // maybe place it with absolute
       <div className="input--wrap">
+        <button
+          key={id + 1}
+          name={id + 1}
+          className="remove--btn"
+          onClick={removeSkill}
+        >
+          -
+        </button>
         <input
           type="text"
           key={id}

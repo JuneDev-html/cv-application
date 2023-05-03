@@ -11,6 +11,7 @@
 
 .input--wrap {
   display: flex;
+  position: relative;
 }
 
 .input--field,
@@ -46,6 +47,21 @@
   color: #000;
   cursor: pointer;
   border: 1px solid black;
+}
+
+.remove--btn {
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.remove--btn:hover {
+  color: red;
+  cursor: pointer;
+  transform: scale(1.2);
 }
 /* ---- Modal ---- */
 

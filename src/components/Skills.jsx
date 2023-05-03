@@ -29,14 +29,18 @@ export const Skills = () => {
   };
 
   // Remove Skill
-  const removeSkill = () => {
-    console.log("Skill removed");
+  const removeSkill = (e) => {
+    const { name } = e.target;
+
+    setSkills((prevSkills) => {
+      return prevSkills.filter((skill) => skill.id != [name]);
+    });
   };
 
   // helps to decide whether to show button / editing modal
   const [edit, setEdit] = React.useState({
     isHovering: false,
-    isEditing: false,
+    isEditing: true,
   });
 
   // changes hover state to show edit button
