@@ -104,3 +104,9 @@ export const SkillsForm = ({
     </section>
   );
 };
+
+// -------- Education ----------
+
+export const EducationForm = () => {
+  return <h1>education</h1>;
+};

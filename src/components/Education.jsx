@@ -1,6 +1,7 @@
 import React from "react";
 import { defaultEducation } from "./Data";
 import { Edit } from "./Edit";
+import { EducationForm } from "./Forms";
 
 export const Education = () => {
   const [education, setEducation] = React.useState(defaultEducation);
@@ -39,7 +40,7 @@ export const Education = () => {
   // helps to decide whether to show button / editing modal
   const [edit, setEdit] = React.useState({
     isHovering: false,
-    isEditing: false,
+    isEditing: true,
   });
 
   // changes hover state to show edit button
@@ -80,15 +81,21 @@ export const Education = () => {
       onMouseEnter={showButton}
       onMouseLeave={showButton}
     >
+      {edit.isEditing && (
+        <div className="modal--container">
+          <div id="headerModal" className="modal">
+            <EducationForm
+              education={education}
+              finishEdit={editSection}
+              // editEducation={editEdu}
+              // addEducation={addEdu}
+              // removeEducation={removeEdu}
+            />
+          </div>
+          <div id="overlay"></div>
+        </div>
+      )}
       <Edit title="Education" edit={edit} editSection={editSection} />
-      {/* <div className="btn-row">
-        <h4 className="section--title">Education</h4>
-        {edit.isHovering && (
-          <button className="edit--btn" onClick={editSection}>
-            Edit
-          </button>
-        )}
-      </div> */}
       {educationHistory}
     </section>
   );
