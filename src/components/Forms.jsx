@@ -1,3 +1,5 @@
+import React from "react";
+
 export const HeadForm = ({ data, updateValues, finishEdit }) => {
   return (
     <section className="form--section">
@@ -155,7 +157,7 @@ export const EducationForm = ({
         />
         <button
           id={item.id}
-          className="remove--education"
+          className="remove--field"
           onClick={removeEducation}
         >
           -
@@ -168,6 +170,121 @@ export const EducationForm = ({
       <h4 className="form--title">Education</h4>
       <div className="edit--wrap">{educationHistory}</div>
       <button className="edit--add" onClick={addEducation}>
+        +
+      </button>
+      <button className="edit--save" onClick={finishEdit}>
+        Save
+      </button>
+    </section>
+  );
+};
+
+// ------ Experience ------
+
+export const ExperienceForm = ({
+  experience,
+  editExperience,
+  finishEdit,
+  addExperience,
+  removeExperience,
+}) => {
+  const experienceHistory = experience.map((exp) => {
+    return (
+      <fieldset key={exp.id} className="education--wrap">
+        <input
+          type="text"
+          id={exp.id}
+          name="position"
+          placeholder="Position"
+          className="input--field"
+          value={exp.position}
+          onChange={(e) => editExperience(e, exp.id)}
+        />
+        <input
+          type="text"
+          id={exp.id}
+          name="from"
+          placeholder="From (Month YYYY)"
+          className="input--field"
+          value={exp.from}
+          onChange={(e) => editExperience(e, exp.id)}
+        />
+        <input
+          type="text"
+          id={exp.id}
+          name="to"
+          placeholder="To (Month YYYY)"
+          className="input--field"
+          value={exp.to}
+          onChange={(e) => editExperience(e, exp.id)}
+        />
+        <input
+          type="text"
+          id={exp.id}
+          name="company"
+          placeholder="Company"
+          className="input--field"
+          value={exp.company}
+          onChange={(e) => editExperience(e, exp.id)}
+        />
+
+        <button
+          id={exp.id}
+          className="remove--field"
+          onClick={removeExperience}
+        >
+          -
+        </button>
+      </fieldset>
+    );
+  });
+  return (
+    <section className="form--section">
+      <h4 className="form--title">Experience</h4>
+      <div className="edit--wrap">{experienceHistory}</div>
+      <button className="edit--add" onClick={addExperience}>
+        +
+      </button>
+      <button className="edit--save" onClick={finishEdit}>
+        Save
+      </button>
+    </section>
+  );
+};
+
+export const Description = ({
+  job,
+  editDescription,
+  addDescription,
+  removeDescription,
+  finishEdit,
+}) => {
+  const description = job.description.map((item, id) => {
+    return (
+      <div key={id} className="input--wrap">
+        <button
+          className="remove--btn"
+          onClick={() => removeDescription(job.id, item.id)}
+        >
+          -
+        </button>
+        <input
+          type="text"
+          name="description"
+          placeholder="Enter skill"
+          className="input--field"
+          value={item.body}
+          onChange={(e) => editDescription(e, job.id, id + 1)}
+        />
+      </div>
+    );
+  });
+
+  return (
+    <section className="form--section">
+      <h4 className="form--title">Job duties</h4>
+      {description}
+      <button className="edit--add" onClick={() => addDescription(job.id)}>
         +
       </button>
       <button className="edit--save" onClick={finishEdit}>

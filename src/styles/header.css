@@ -82,7 +82,8 @@ header {
 .edit--btn,
 .edit--save,
 .edit--add,
-.remove--education {
+.remove--field,
+.add--description {
   padding: 3px 20px;
   background-color: #000;
   color: #f1f1f1;
@@ -91,6 +92,9 @@ header {
   transition: 0.2s;
 }
 
+.description {
+  margin-top: 10px;
+}
 .edit--btn:hover,
 .edit--save:hover {
   background-color: transparent;

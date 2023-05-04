@@ -40,10 +40,13 @@ export const Education = () => {
   // Remove Education Entry
   const removeEdu = (e) => {
     const { id } = e.target;
-    console.log(id);
 
     setEducation((prevEdu) => {
-      return prevEdu.filter((edu) => edu.id != [id]);
+      const newEdu = prevEdu.filter((edu) => edu.id != [id]); // remove unwanted entry
+      // update id on remaining entries
+      return newEdu.map((edu, id) => {
+        return { ...edu, id: id + 1 };
+      });
     });
   };
 
