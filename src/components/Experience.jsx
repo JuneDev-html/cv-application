@@ -133,7 +133,11 @@ export const Experience = () => {
         return exp.id === job
           ? {
               ...exp,
-              description: exp.description.filter((item) => item.id !== id),
+              description: exp.description
+                .filter((item) => item.id !== id) // first return array without unwanted item
+                .map((item, id) => {
+                  return { ...item, id: id + 1 }; // then update the id's on new array and return
+                }),
             }
           : exp;
       });

@@ -271,7 +271,7 @@ export const Description = ({
         <input
           type="text"
           name="description"
-          placeholder="Enter skill"
+          placeholder="Enter description"
           className="input--field"
           value={item.body}
           onChange={(e) => editDescription(e, job.id, id + 1)}
